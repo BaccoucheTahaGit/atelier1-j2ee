@@ -8,13 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet(name="Bonjour",urlPatterns="/Bonjour")
-public class BonjourServlet extends HttpServlet{
 
-	private int compteur=0;
+@WebServlet(name="Bonsoir",urlPatterns="/Bonsoir")
+public class BonsoirServlet extends HttpServlet {
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.compteur++ ;
 		resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         
@@ -23,12 +22,11 @@ public class BonjourServlet extends HttpServlet{
         out.println("<html>");
         out.println("<head>");
         out.println("<meta charset=\"utf-8\" />");
-        out.println("<title>Bonjour Iset</title>");
+        out.println("<title>Bonsoir Iset</title>");
         out.println("</head>");
-        out.println("<p>Cette Servlet a été accédée "+compteur+" fois.</p>");
-
+        
         out.println("<body>");
-        out.println("<p>Bonjour Iset Djerba!</p>");
+        out.println("<p>Bonsoir Iset Djerba!</p>");
         out.println("</body>");
         out.println("</html>");
 	}
@@ -38,6 +36,6 @@ public class BonjourServlet extends HttpServlet{
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}
-
 	
+
 }
